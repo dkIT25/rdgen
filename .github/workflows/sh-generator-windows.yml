@@ -69,6 +69,8 @@ jobs:
     name: Build Windows
     needs: [build-RustDeskTempTopMostWindow, generate-bridge, setup]
     runs-on: windows-2022
+    env:
+      VCPKG_ROOT: C:\vcpkg
     strategy:
       fail-fast: false
       matrix:
